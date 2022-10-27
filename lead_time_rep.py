@@ -118,6 +118,7 @@ try:
 
 except Exception as ex:
     print(f"Failed to connect:\n{ex}")
+    input()
 
 
 try:
@@ -125,10 +126,12 @@ try:
     os.system('cls')
     print_banner()
     print("Successful connection")
-except:
+except Exception as ex:
     os.system('cls')
     print_banner()
     print('Ha ocurrido un error con el query.\nAlguna fecha está incorrecta o el query ha sido modificado.')
+    print(ex)
+    input()
 
 print_loadscreen()
 
