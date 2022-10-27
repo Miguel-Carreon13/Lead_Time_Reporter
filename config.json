@@ -1,0 +1,17 @@
+[
+    {
+        "tagid" : "optera",
+        "type" : "cstring",
+        "DSN" : "Optera-usl0904",
+        "UID" : "rvenzor",
+        "PSW" : "nor$man83"
+    },
+
+    {
+
+        "tagid" : "query_test",
+        "type" : "query",
+        "query" : "SELECT tray_hist_mst.traynum, tray_hist_mst.job_number, tray_hist_dtl.station_date, tray_hist_dtl.station_time, sub_head.s_code, sub_head.sub_desc FROM tray_hist_dtl, tray_hist_mst, sub_head WHERE tray_hist_dtl.thistd_tx_id = tray_hist_mst.thistm_tx_id AND tray_hist_dtl.tray_station = sub_head.s_code AND (tray_hist_dtl.station_date >= 'STARTING-DATE') AND  (tray_hist_dtl.station_date <= 'ENDING-DATE') ORDER BY tray_hist_mst.traynum, tray_hist_dtl.station_date, tray_hist_dtl.station_time"
+
+    }
+]
