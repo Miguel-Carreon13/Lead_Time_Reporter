@@ -235,6 +235,8 @@ for log in info:
     prev_log = log
 
 df['lead_time'] = lead_time
+df['lead_time'] = df['lead_time'].shift(-1)
+print(df)
 cols = list(df.columns.values)
 tray_ind = cols.index('traynum')
 
